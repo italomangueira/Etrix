@@ -1,5 +1,42 @@
-<div>
-    <div><!-- Hero Section -->
-        slider
+<div class="container">
+    <div
+        class="overflow-hidden rounded-3xl min-h-[550px] sm:min-h-[500px] hero-bg-color flex justify-center items-center">
+
+        <div class="container pb-8 sm:pb-0">
+            <!-- Hero Section -->
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                @for (hero of HeroData; track HeroData) {
+                <div ngxSlickItem class="slide">
+                    <div class="grid grid-cols-1 sm:grid-cols-2">
+                        <!-- text content section -->
+                        <div
+                            class=" flex flex-col justify-center gap-4 sm:pl-3 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
+                            <h1 class="text-2xl sm:text-6xl lg:text-2xl font-bold">
+                                {{hero.subtitle}}
+                            </h1>
+                            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold">
+                                {{hero.title}}
+                            </h1>
+                            <h1
+                                class="text-5xl uppercase text-white dark:text-white/5 sm:text-[80px] md:text-[100px] xl:text-[150px] font-bold">
+                                {{hero.title2}}
+                            </h1>
+                            <div>
+                                <button class="button bg-primary text-white">Shop By Category</button>
+                            </div>
+                        </div>
+                        <!-- Img section -->
+                        <div class="order-1 sm:order-2">
+                            <div>
+                                <img src="{{hero.img}}" alt=""
+                                    class="w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] sm:scale-105 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)] relative z-40">
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                }
+            </ngx-slick-carousel>
+        </div>
     </div>
 </div>
