@@ -1,0 +1,11 @@
+<div>
+    <div class="container">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8">
+            @for (service of ServiceData; track ServiceData) {
+                <div>
+                    {{service.title}}
+                </div>
+            }
+        </div>
+    </div>
+</div>

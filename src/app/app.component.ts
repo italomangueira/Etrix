@@ -4,6 +4,7 @@ import { NavBarComponent } from "./src/components/nav-bar/nav-bar.component";
 import { HeroComponent } from "./src/components/hero/hero.component";
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CategoryComponent } from "./src/components/category/category.component";
+import { ServicesComponent } from "./src/components/services/services.component";
 
 
 
@@ -12,7 +13,7 @@ import { CategoryComponent } from "./src/components/category/category.component"
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, NavBarComponent, HeroComponent, SlickCarouselModule, CategoryComponent]
+    imports: [RouterOutlet, NavBarComponent, HeroComponent, SlickCarouselModule, CategoryComponent, ServicesComponent]
 })
 export class AppComponent {
   title = 'ETRIX';
