@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostBinding, signal } from '@angular/core';
 
 
 @Component({
@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
   imports: [NgFor,]
 })
 export class NavBarComponent {
+  darkMode = signal<boolean>(false);
+  @HostBinding('class.dark') get mode() {return this.darkMode(); }
 
   public MenuLinks = [
     {

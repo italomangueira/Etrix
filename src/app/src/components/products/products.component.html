@@ -1,0 +1,34 @@
+<div>
+    <div class="container">
+        <!--Head section-->
+        <div class="text-center mb-10 max-w-[600px] mx-auto space-y-2">
+            <h1 class="text-3xl font-bold lg:text-4xl">Our Products</h1>
+            <p class="text-xs text-gray-400">Explore Our Products</p>
+        </div>
+        <!--Body section-->
+        <div class="mb-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 place-items-center">
+                @for (products of ProductsData; track ProductsData) {
+                <!--card section-->
+                <div class="group">
+                    <!--Image-->
+                    <div class="relative">
+                        <img src="{{products.img}}" alt="" class="h-[180px] w-[260px] object-cover rounded-md" />
+                        <!--Hover Button-->
+                        <div
+                            class="hidden group-hover:flex absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm justify-center items-center duration-200">
+                            <button class="button bg-primary text-white"> Add to Cart</button>
+                        </div>
+                    </div>
+                    <!--Price-->
+                    <div class="leading-7">
+                        <h2 class="font-semibold">{{products.title}}</h2>
+                        <h2 class="font-bold">${{products.price}}</h2>
+                    </div>
+
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

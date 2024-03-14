@@ -1,5 +1,119 @@
-<app-nav-bar></app-nav-bar>
-<app-hero></app-hero>
-<app-category></app-category>
-<app-services></app-services>
-<router-outlet></router-outlet>
+<div class="bg-white dark:bg-gray-900 dark:text-white h-full duration-700">
+    <div class="bg-white dark:bg-gray-900 dark:text-white duration-700 relative z-40">
+        <div class="py-4">
+            <div class="container flex justify-between items-center gap-10">
+                <!-- Logo And Links -->
+                <div class="flex items-center gap-4">
+                    <a href="#" class="text-primary font-semibold 
+                                tracking-widest text-2xl uppercase sm:text-3xl">
+                        Etrix
+                    </a>
+
+                    <!-- Menu Items -->
+                    @for (menu of MenuLinks; track MenuLinks) {
+                    <div class="hidden lg:block">
+                        <ul class="flex items-center gap-4">
+                            <li>
+                                <a href={{menu.link}}
+                                    class="inline-block px-4 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200">
+                                    {{menu.name}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    }
+
+                    <!--Dropdown-->
+                    <div class="relative cursor-pointer group">
+                        <a href="#"
+                            class="flex items-center gap-2 font-semibold text-gray-500 dark:hover:text-white py-2">
+                            Quick Links
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-chevron-down group-hover:rotate-180 duration-300"
+                                    width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M6 9l6 6l6 -6" />
+                                </svg>
+                            </span>
+                        </a>
+
+                        <!--Dropdown Links-->
+                        <div
+                            class="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-gray-40 shadow-md dark:bg-gray-900 p-2 dark:text-white">
+                            <ul class="space-y-2">
+                                <li>
+                                    <a class="links" href="/#">
+                                        Trending Product
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a class="links" href="/#">
+                                        Best Selling
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="links" href="/#">
+                                        Top Rated
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- NavBar Right section -->
+                <div class="flex justify-between items-center gap-4">
+                    <!-- Search Bar section -->
+                    <div class="relative group hidden sm:block">
+                        <input type="text" placeholder="Search" class="search-bar" />
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-search text-xl text-gray-600 group-hover:text-primary dark:text-gray-400 absolute top-1/2 -translate-y-1/2 right-3 duration-200"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                            <path d="M21 21l-6 -6" />
+                        </svg>
+                    </div>
+                    <!-- Order Buttons -->
+                    <button class="relative p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-shopping-cart-filled text-xl text-gray-600 dark:text-gray-400"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"
+                                stroke-width="0" fill="currentColor" />
+                        </svg>
+                        <div class="w-4 h-4 bg-red-500 text-white
+                        rounded-full absolute top-0 right-0 flex
+                        items-center justify-center text-xs">
+                            4
+                        </div>
+                    </button>
+                    <!--dark mode button-->
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input class="sr-only peer" value="" type="checkbox" (click)="darkMode.set(!darkMode())" />
+                        <div
+                            class="w-24 h-12 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden before:flex before:items-center before:justify-center after:flex after:items-center after:justify-center before:content-['☀️'] before:absolute before:h-10 before:w-10 before:top-1/2 before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 peer-checked:before:opacity-0 peer-checked:before:rotate-90 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['🌑'] after:absolute after:bg-[#1d1d1d] after:rounded-full after:top-[4px] after:right-1 after:translate-y-full after:w-10 after:h-10 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 peer-checked:after:rotate-180 peer-checked:after:translate-y-0">
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-hero></app-hero>
+    <app-category></app-category>
+    <app-services></app-services>
+    <app-banner></app-banner>
+    <app-products></app-products>
+    <app-banner2></app-banner2>
+    <app-blog></app-blog>
+    <app-partners></app-partners>
+    <router-outlet></router-outlet>
+</div>

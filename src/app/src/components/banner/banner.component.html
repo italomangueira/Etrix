@@ -1,0 +1,29 @@
+<div class="min-h-[550px] flex justify-center items-center py-12">
+    <div class="container">
+        @for (banner of DataBanner; track DataBanner) {
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center {{banner.bgColor}} text-white rounded-3xl">
+            <!-- First col -->
+            <div class="p-6 sm:p-8">
+                <p class="text-sm">{{banner.discount}}</p>
+                <h1 class="uppercase text-4xl lg:text-7xl font-bold">{{banner.title}}</h1>
+                <p class="text-sm">{{banner.date}}</p>
+            </div>
+            <!-- second col -->
+            <div class="h-full flex items-center">
+                <img src="{{banner.image}}"
+                    class="scale-125 w-[250px] md:w-[340px] mx-auto drop-shadow-2xl object-cover" />
+            </div>
+            <!-- third col -->
+            <div class="flex flex-col justify-center gap-4 p-6 sm:p-8">
+                <p class="font-bold text-xl">{{banner.title2}}</p>
+                <p class="text-3xl sm:text-5xl font-bold">{{banner.title3}}</p>
+                <p class="text-sm tracking-wide leading-5">{{banner.title4}}</p>
+                <div>
+                    <button class="button bg-white text-primary">Shop Now</button>
+                </div>
+            </div>
+        </div>
+        }
+
+    </div>
+</div>
