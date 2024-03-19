@@ -1,1 +1,80 @@
-<p>footer works!</p>
+<footer class="dark:bg-gray-950">
+    <div class="container">
+        <div class="grid md:grid-cols-3 pb-20 pt-5">
+            <!--company details-->
+            <div class="py-8 px-4">
+                <a href="#" class="text-primary font-semibold 
+                            tracking-widest text-2xl uppercase sm:text-3xl">
+                    Etrix
+                </a>
+                <p class="text-gray-600 dark:text-white/70  lg:pr-24 pt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat debitis autem delectus beatae
+                    eligendi.
+                </p>
+                <p class="text-gray-500 mt-4">Made with 💖 by Italo Mangueira</p>
+                <a href="https://github.com/italomangueira/Etrix" target="_blank"
+                    class="inline-block bg-primary/90 text-white py-2 px-4 mt-4 text-sm rounded-full">
+                    View Project Code
+                </a>
+
+            </div>
+            <!--Footer links-->
+            <div class="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10">
+                <!--first links-->
+                <div class="py-8 px-4">
+                    <h1 class="text-xl font-bold sm:text-left mb-3">Important Links</h1>
+                    <ul class="space-y-3">
+                        @for (link of FooterLinks; track FooterLinks) {
+                        <li>
+                            <a href="{{link.link}}"
+                                class="text-gray-600 hover:text-black duration-300 dark:hover:text-gray-400">
+                                {{link.title}}
+                            </a>
+                        </li>
+                        }
+                    </ul>
+                </div>
+                <!--Second links-->
+                <div class="py-8 px-4">
+                    <h1 class="text-xl font-bold sm:text-left mb-3">Quick Links</h1>
+                    <ul class="space-y-3">
+                        @for (link of QuickLinks; track QuickLinks) {
+                        <li>
+                            <a href="{{link.link}}"
+                                class="text-gray-600 hover:text-black duration-300 dark:hover:text-gray-400">
+                                {{link.title}}
+                            </a>
+                        </li>
+                        }
+                    </ul>
+                </div>
+                <!--Company Address-->
+                <div class="py-8 px-4 col-span-2 items-center sm:col-auto">
+                    <h1 class="text-xl font-bold sm:text-left mb-3">Address</h1>
+                    <div>
+                        <!--location Address-->
+                        <div class="flex items-center gap-3">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>Brasil, Cajazeiras-PB</p>
+                        </div>
+                        <!--phone number-->
+                        <div class="flex items-center gap-3 mt-3">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>83-996463823</p>
+                        </div>
+
+                        <!--Social Links-->
+                        <div class="flex items-center gap-3 mt-6">
+                            <a href="https://github.com/italomangueira">
+                                <i class="bi bi-github text-3xl hover:text-primary duration-300"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/italo-mangueira-6a39b3211/">
+                                <i class="bi bi-linkedin text-3xl hover:text-primary duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

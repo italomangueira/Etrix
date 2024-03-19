@@ -11,20 +11,20 @@ import { ProductsComponent } from "./src/components/products/products.component"
 import { Banner2Component } from "./src/components/banner2/banner2.component";
 import { BlogComponent } from "./src/components/blog/blog.component";
 import { PartnersComponent } from "./src/components/partners/partners.component";
-
+import { FooterComponent } from "./src/components/footer/footer.component";
 
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css',
-    providers: [IconSetService],
-    imports: [RouterOutlet, NavBarComponent, HeroComponent, SlickCarouselModule, CategoryComponent, ServicesComponent, IconModule, BannerComponent, ProductsComponent, Banner2Component, BlogComponent, PartnersComponent]
+  selector: 'app-root',
+  standalone: true,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
+  providers: [IconSetService],
+  imports: [RouterOutlet, NavBarComponent, HeroComponent, SlickCarouselModule, CategoryComponent, ServicesComponent, IconModule, BannerComponent, ProductsComponent, Banner2Component, BlogComponent, PartnersComponent, FooterComponent]
 })
 export class AppComponent {
   darkMode = signal<boolean>(false);
-  @HostBinding('class.dark') get mode() {return this.darkMode(); }
+  @HostBinding('class.dark') get mode() { return this.darkMode(); }
 
 
   public MenuLinks = [
@@ -50,4 +50,5 @@ export class AppComponent {
     },
   ];
   title = 'ETRIX';
+
 }

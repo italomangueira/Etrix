@@ -32,23 +32,23 @@ export class HeroComponent {
     {
       id: 1,
       subtitle: "Beats Solo",
-      img: "https://github.com/dilshad-ahmed/Eshop-TCJ/blob/main/src/assets/hero/headphone.png?raw=true",
+      img: "https://github.com/italomangueira/Etrix/blob/master/src/assets/hero/headphone.png?raw=true",
       title: "Wireless",
       title2: "Headphone",
     },
     {
       id: 2,
       subtitle: "Beats Solo",
-      img: "https://github.com/dilshad-ahmed/Eshop-TCJ/blob/main/src/assets/hero/watch.png?raw=true",
+      img: "https://github.com/italomangueira/Etrix/blob/master/src/assets/hero/watch.png?raw=true",
       title: "Wireless",
-      title2: "Virtual",
+      title2: "SmartWatch",
     },
     {
       id: 3,
-      img: "https://github.com/dilshad-ahmed/Eshop-TCJ/blob/main/src/assets/category/macbook.png?raw=true",
+      img: "https://github.com/italomangueira/Etrix/blob/master/src/assets/Category/gaming.png?raw=true",
       subtitle: "Beats Solo",
       title: "Branded",
-      title2: "Laptops",
+      title2: "Console",
     },
   ];
 
