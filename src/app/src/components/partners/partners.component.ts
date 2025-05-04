@@ -11,19 +11,19 @@ export class PartnersComponent {
 
   partners = [
     {
-      img: "https://github.com/italomangueira/Etrix/blob/master/src/assets/partners/br-1.png?raw=true"
+      img: "https://raw.githubusercontent.com/italomangueira/Etrix/refs/heads/master/src/assets/partners/br-1.png"
     },
     {
-      img: "https://github.com/italomangueira/Etrix/blob/master/src/assets/partners/br-2.png?raw=true"
+      img: "https://raw.githubusercontent.com/italomangueira/Etrix/refs/heads/master/src/assets/partners/br-2.png"
     },
     {
-      img: "https://github.com/italomangueira/Etrix/blob/master/src/assets/partners/br-3.png?raw=true"
+      img: "https://raw.githubusercontent.com/italomangueira/Etrix/refs/heads/master/src/assets/partners/br-3.png"
     },
     {
-      img: "https://github.com/italomangueira/Etrix/blob/master/src/assets/partners/br-4.png?raw=true"
+      img: "https://raw.githubusercontent.com/italomangueira/Etrix/refs/heads/master/src/assets/partners/br-4.png"
     },
     {
-      img: "https://github.com/italomangueira/Etrix/blob/master/src/assets/partners/br-5.png?raw=true"
+      img: "https://raw.githubusercontent.com/italomangueira/Etrix/refs/heads/master/src/assets/partners/br-5.png"
     }
   ]
 }

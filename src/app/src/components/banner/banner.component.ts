@@ -14,7 +14,7 @@ export class BannerComponent {
       discount: "30% OFF",
       title: "Fine Smile",
       date: "10 Jan to 28 Jan",
-      image: "https://github.com/italomangueira/Etrix/blob/master/src/assets/hero/headphone.png?raw=true",
+      image: "https://raw.githubusercontent.com/italomangueira/Etrix/refs/heads/master/src/assets/hero/headphone.png",
       title2: "Air Solo Bass",
       title3: "Winter Sale",
       title4: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque reiciendis",

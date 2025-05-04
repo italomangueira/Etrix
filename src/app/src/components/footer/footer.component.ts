@@ -30,19 +30,19 @@ export class FooterComponent {
   QuickLinks = [
     {
       title: "Portfolio",
-      link: "/#",
+      link: "https://portfolio-italo-m.vercel.app/",
     },
     {
       title: "GitHub",
       link: "https://github.com/italomangueira",
     },
     {
-      title: "Contact",
-      link: "/#contact",
+      title: "Email",
+      link: "italo.mangueira@hotmail.com",
     },
     {
       title: "Linkedin",
-      link: "https://www.linkedin.com/in/italo-mangueira-6a39b3211/",
+      link: "https://www.linkedin.com/in/italo-mangueira-6a39b3211",
     },
   ]
 }

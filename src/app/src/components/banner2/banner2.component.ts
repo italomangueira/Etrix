@@ -13,7 +13,7 @@ export class Banner2Component {
       discount: "30% OFF",
       title: "Happy Hours",
       date: "14 Jan to 28 Jan",
-      image: "https://github.com/italomangueira/Etrix/blob/master/src/assets/Category/smartwatch2-removebg-preview.png?raw=true",
+      image: "https://raw.githubusercontent.com/italomangueira/Etrix/refs/heads/master/src/assets/Category/smartwatch2-removebg-preview.png",
       title2: "Smart Solo",
       title3: "Winter Sale",
       title4:
