@@ -1,6 +1,6 @@
 # Etrix
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+Esse Projeto é apenas um tamplate de Ecommerce, use avontade para implementar sua loja virtual.
 
 ## Development server
 
